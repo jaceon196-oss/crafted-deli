@@ -10,8 +10,7 @@ public class Bread extends Sandwich {
         this.type = type;
     }
 
-    public Bread() {
-    }
+
 
     public void breadType() {
         Scanner userInput = new Scanner(System.in);

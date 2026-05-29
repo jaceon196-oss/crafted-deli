@@ -13,11 +13,14 @@ public class Topping extends Sandwich {
     private boolean extraMeat;
     private boolean extraCheese;
 
-    public Topping() {
-    }
+
 
     public Topping(String size) {
         super(size);
+    }
+
+    public Topping() {
+
     }
 
     public String toppings() {
@@ -114,11 +117,11 @@ public class Topping extends Sandwich {
                 this.price += 0.6F;
             }
         } else if (size.equals("L")) {
-            for(int i = 0; i < meatServings; ++i) {
+            for(int i = 1; i < meatServings; ++i) {
                 this.price += 3.0F;
             }
 
-            for(int i = 0; i < cheeseServings; ++i) {
+            for(int i = 1; i < cheeseServings; ++i) {
                 this.price += 2.25F;
             }
 

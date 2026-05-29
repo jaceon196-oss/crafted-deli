@@ -2,12 +2,14 @@ package com.pluralsight;
 
 public class Order {
     private float price;
-
-    public Order() {
-    }
+    private Object receiptText;
 
     public Order(float price) {
         this.price = price;
+    }
+
+    public Order() {
+
     }
 
     public float getPriceD() {
@@ -20,5 +22,13 @@ public class Order {
 
     public String showReceipt() {
         return "";
+    }
+
+    public Object getReceiptText() {
+        return receiptText;
+    }
+
+    public void setReceiptText(Object receiptText) {
+        this.receiptText = receiptText;
     }
 }

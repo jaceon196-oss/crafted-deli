@@ -15,11 +15,11 @@ public class Drinks {
     private float price;
 
     private static void loadDrinks() {
-        Drinks Salha = new Drinks("Small", true, "Salha", "Strawberry Lemonade Juice", 2.0F);
+        Drinks Berry; Drinks Sprite = new Drinks("Small", true, "Salha", "Strawberry Lemonade Juice", 2.0F);
         Drinks Torue = new Drinks("Medium", true, "Torue", "Tangerine Passion Flavored Water", 2.5F);
         Drinks Braynel = new Drinks("Small", false, "Braynel", "Berry Blast Soda", 2.0F);
         Drinks Andy = new Drinks("Large", true, "Andy", "Amazing Apple Juice", 3.0F);
-        drinksList.add(Salha);
+        drinksList.add(Sprite);
         drinksList.add(Torue);
         drinksList.add(Braynel);
         drinksList.add(Andy);
@@ -107,10 +107,12 @@ public class Drinks {
                 default:
                     System.out.println("Your drink has been added");
             }
+            break;
         } while(!userInput.equalsIgnoreCase("No"));
 
         return this.price;
     }
+
 
     public String toString() {
         return "Drinks{size=" + this.size + ", ice=" + this.ice + ", brand='" + this.brand + "', flavor='" + this.flavor + "'}";

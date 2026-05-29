@@ -11,31 +11,30 @@ public class Chips {
     private boolean isSpicy;
 
     public Chips() {
+
     }
+
 
     public float chipsMenu() {
         loadChips();
 
-        String input;
-        do {
-            System.out.println("Would you like chips?");
-            input = scanner.next();
-            if (input.equalsIgnoreCase("Yes")) {
-                ++this.price;
-            }
+        String string;
+
+        System.out.println("Would you like chips? (yes/no)");
+        String input = scanner.next();
+
+        if (input.equalsIgnoreCase("yes")) {
 
             System.out.println("Spicy chips or regular chips?");
-            input = scanner.next();
-            System.out.println("Would you like another order of chips?\nType 'No' to exit, otherwise any input to order more chips.");
-            switch (scanner.next()) {
-                case "No":
-                    System.out.println("We Gotchu!! The chips have been added to your cart");
-                    break;
-                default:
-                    System.out.println("");
-            }
-        } while(!input.equalsIgnoreCase("No"));
+            String chipType = scanner.next();
 
+            System.out.println(chipType + " chips added to cart.");
+
+            // example price update
+            this.price += 1.50;
+        } else {
+            System.out.println("No chips added.");
+        }
         return this.price;
     }
 
